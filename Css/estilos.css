@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+.encabezado-sitio {
+    background-color: #510c96; 
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    font-style: bold;
+}
+
+.logo-sitio h1 {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.navegacion-principal ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navegacion-principal a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Buscador del Header */
+.formulario-busqueda {
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.formulario-busqueda input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.formulario-busqueda button {
+    background: transparent;
+    border: none;
+    color: #311165;
+    cursor: pointer;
+    display: flex;
+}
+
+/* 4. CONTENIDO PRINCIPAL (Layout Flexible) */
+.contenido-principal {
+    padding-bottom: 50px;
+}
+
+.seccion-destacada {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 8%;
+    gap: 40px;
+}
+
+/* 5. TEXTO HERO */
+.texto-destacado {
+    flex: 1;
+}
+
+.texto-destacado h2 {
+    font-family: 'Google Sans', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.texto-destacado p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    max-width: 480px;
+    margin-bottom: 40px;
+}
+
+/* Botones de acción */
+.acciones-destacadas button {
+    background-color: #edb96e; /* Dorado suave */
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: filter 0.3s;
+}
+
+.acciones-destacadas button:hover {
+    filter: brightness(0.9);
+}
+
+/* 6. FORMULARIO LATERAL (Cuadro Rosa) */
+.formulario-cita {
+    background-color: #d14d62; /* Color frambuesa de la imagen */
+    width: 450px;
+    padding: 40px;
+    border-radius: 4px; /* Casi recto como en la imagen */
+    color: white;
+}
+
+.formulario-cita h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.formulario-cita form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fila-formulario {
+    display: flex;
+    gap: 10px;
+}
+
+.formulario-cita input, 
+.formulario-cita textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.formulario-cita textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Botón Enviar dentro de Formulario */
+.formulario-cita button {
+    background-color: #edb96e;
+    color: #835c24; /* Texto café oscuro sobre dorado */
+    border: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* 7. SECCIÓN DE SERVICIOS (Cuadros Inferiores) */
+.seccion-servicios {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 8% 80px 8%;
+}
+
+.servicio-item {
+    background-color: #f5f7f9; /* Gris muy claro */
+    padding: 40px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.servicio-item:hover {
+    transform: translateY(-5px);
+}
+
+.iconos {
+    width: 50px;
+    height: 50px;
+    color: #311165;
+    margin-bottom: 20px;
+}
+
+.servicio-item p {
+    font-family: 'Google Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+/* 8. PIE DE PÁGINA */
+.pie-sitio {
+    background-color: #841656; /* Púrpura rojizo */
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+/* 9. RESPONSIVE */
+@media (max-width: 1100px) {
+    .seccion-destacada { flex-direction: column; align-items: center; text-align: center; }
+    .texto-destacado p { margin: 0 auto 30px auto; }
+    .seccion-servicios { grid-template-columns: repeat(2, 1fr); }
+    .formulario-cita { width: 100%; max-width: 500px; }
+}
