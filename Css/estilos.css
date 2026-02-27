@@ -59,8 +59,6 @@ body {
 }
 
 
-
-
 .texto-destacado h2 {
     font-size: 56px;
     font-weight: 700;
@@ -116,13 +114,6 @@ body {
     gap: 10px;
 }
 
-.formulario-cita input, 
-.formulario-cita textarea {
-    width: 100%;
-    padding: 14px;
-    border: none;
-    border-radius: 4px;
-}
 
 .formulario-cita textarea {
     height: 100px;
